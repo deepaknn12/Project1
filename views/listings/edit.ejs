@@ -1,0 +1,47 @@
+<% layout('layouts/boilerplate') %>
+<body>
+    <form method="POST" action="/listings/<%=listing._id%>?_method=PUT" class="edit-form">
+        <label for="title">Title:</label>
+        <input type="text" id="title" name="listing[title]" value="<%=listing.title%>" class="form-input">
+        <br/><br/>
+
+        <label for="description">Description:</label>
+        <textarea id="description" name="listing[description]" class="form-input"><%=listing.description%></textarea>
+        <br/><br/>
+
+        <label for="price">Price:</label>
+        <input type="number" id="price" name="listing[price]" value="<%=listing.price%>" class="form-input">
+        <br/><br/>
+
+        <label for="Image">Image URL:</label>
+        <input type="text" id="Image" name="listing[Image]" value="<%=listing.Image%>" class="form-input">
+        <br/><br/>
+
+        <label for="location">Location:</label>
+        <input type="text" id="location" name="listing[location]" value="<%=listing.location%>" class="form-input">
+        <br/><br/>
+
+        <label for="Country">Country:</label>
+        <input type="text" id="Country" name="listing[Country]" value="<%=listing.Country%>" class="form-input">
+        <br/><br/>
+
+        <button type="submit" class="form-button">Edit</button>
+    </form>
+    <br/>
+
+<br/><br/><br/><br/><br/><br/><br/>
+    <div>
+        <div class="footerr">
+            <i class="fa-brands fa-instagram"></i>
+            <i class="fa-brands fa-facebook"></i>
+            <i class="fa-brands fa-linkedin"></i>
+        </div>
+</div>
+<div class="copyright">
+    <p>© wanderlust Private-Limited</p>
+    <div class="privaryy">
+        <p>Privacy</p>
+        <p>Terms</p>
+    </div>
+</div>
+</body>

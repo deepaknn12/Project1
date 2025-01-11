@@ -1,0 +1,181 @@
+.nav-link {
+    color: black !important;
+}
+.navbar-brand {
+    color: red !important;
+}
+.navbar {
+    height: 5rem !important;
+    background-color: white !important;
+}
+.card {
+    border: none !important;
+    margin-bottom: 2rem;
+}
+.card-img-top {
+    border-radius: 1rem !important;
+    width: 100% !important;
+    object-fit: cover !important;
+}
+.card-body {
+    padding: 0 !important;
+}
+.card-text p {
+    font-weight: 400;
+}
+.listing-link {
+    text-decoration: none;
+}
+
+/* Footer Styles */
+.footerr {
+    background-color: rgb(255, 255, 255) !important;
+    color: black;
+    gap: 10px;
+    display: flex;
+    justify-content: center;
+}
+.copyright {
+    background-color: rgb(255, 254, 254) !important;
+    text-align: center;
+    height: 80px;
+    color: black;
+}
+.fa-brands {
+    margin: 10px;
+}
+.privaryy {
+    display: flex;
+    gap: 10px !important;
+    text-align: center;
+    justify-content: center;
+}
+
+/* Form Styles */
+.edit-form {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+}
+.form-input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.form-button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.form-button:hover {
+    background-color: #0056b3;
+}
+
+/* Reviews Section Styles */
+.reviews-container {
+    margin-top: 20px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+}
+
+/* Review Cards */
+.review-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Horizontal layout */
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #ffffff;
+}
+
+/* Review Content */
+.review-content {
+    flex-grow: 1; /* Allow content to take up space */
+    margin-right: 10px; /* Add spacing between text and buttons */
+}
+
+.review-rating {
+    font-weight: bold;
+    color: #007bff;
+}
+
+.review-comment {
+    margin-top: 5px;
+    color: #555;
+}
+
+/* Button Styles in Reviews */
+.delete-button {
+    padding: 5px 10px;
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.delete-button:hover {
+    background-color: darkred;
+}
+/* Reviews Section */
+.reviews-container {
+    margin-top: 20px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+}
+
+/* Individual Review Card */
+.review-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #ffffff;
+}
+
+/* Review Content */
+.review-content {
+    flex-grow: 1;
+    margin-right: 10px;
+}
+
+.review-rating {
+    font-weight: bold;
+    color: #007bff;
+}
+
+.review-comment {
+    margin-top: 5px;
+    color: #555;
+}
+
+/* Delete Button for Review */
+.delete-button {
+    padding: 5px 10px;
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.delete-button:hover {
+    background-color: darkred;
+}

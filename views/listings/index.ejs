@@ -1,0 +1,44 @@
+<% layout('layouts/boilerplate') %>
+
+<body>
+    <h1>Wanderlust</h1>
+    <form method="GET" action="/listings/new">
+        <button>CREATE NEW DATA</button>
+        <br />
+        <br />
+    </form>
+    <div class="row row-cols-lg-3 row-cols-md-2 row-cols-sm-1 g-4">
+    <% for(let listing of AllListings){ %>
+        <a href="/listings/<%= listing._id%>" class="listing-link">
+    <div class="card" style="width: 25rem;">
+        <img src="<%=listing.Image%>" class="card-img-top" alt="..." style="height: 20rem;">
+        <div class="card-body">
+            <b><%= listing.title %></b> <br />
+            
+           <b>₹<%= listing.price.toLocaleString('en-IN') %></b>/Night<br />
+            
+            
+        </div>
+      </div>
+    
+
+      <% } %>
+      
+
+      
+    </div>
+<div>
+        <div class="footerr">
+            <i class="fa-brands fa-instagram"></i>
+            <i class="fa-brands fa-facebook"></i>
+            <i class="fa-brands fa-linkedin"></i>
+        </div>
+</div>
+<div class="copyright">
+    <p>© wanderlust Private-Limited</p>
+    <div class="privaryy">
+        <p>Privacy</p>
+        <p>Terms</p>
+    </div>
+</div>
+</body>

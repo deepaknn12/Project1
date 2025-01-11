@@ -1,0 +1,28 @@
+<% layout('layouts/boilerplate') %>
+<body>
+    <form method="POST" action="/listings" class="edit-form">
+        <input type="text" name="listing[title]" placeholder="Title" class="form-input">
+        <textarea name="listing[description]" placeholder="Description" class="form-input"></textarea>
+        <input type="number" name="listing[price]" placeholder="Price" class="form-input">
+        <input type="text" name="listing[Image]" placeholder="Image/URL/link" class="form-input">
+        <input type="text" name="listing[location]" placeholder="Location" class="form-input">
+        <input type="text" name="listing[Country]" placeholder="Country" class="form-input">
+        <button class="form-button">ADD</button>
+    </form>
+
+    <br/><br/><br/><br/><br/><br/><br/><br/><br/>
+    <div>
+        <div class="footerr">
+            <i class="fa-brands fa-instagram"></i>
+            <i class="fa-brands fa-facebook"></i>
+            <i class="fa-brands fa-linkedin"></i>
+        </div>
+    </div>
+    <div class="copyright">
+        <p>© wanderlust Private-Limited</p>
+        <div class="privaryy">
+            <p>Privacy</p>
+            <p>Terms</p>
+        </div>
+    </div>
+</body>

@@ -1,0 +1,83 @@
+<% layout('layouts/boilerplate') %>
+<body>
+  <h3>Details</h3>
+  <div class="card" style="width: 18rem;">
+    <img src="<%= listing.Image %>" class="card-img-top" alt="...">
+    <div class="card-body">
+      <p class="card-text"><b><%= listing.title %></b></p>
+    </div>
+  </div>
+  <ul>
+    <li><b>Title:</b> <%= listing.title %></li>
+    <li><b>Description:</b> <%= listing.description %></li>
+    <li><b>Price: </b>₹<%= listing.price.toLocaleString('en-IN') %></li>
+    <li><b>Location:</b> <%= listing.location %></li>
+    <li><b>Country:</b> <%= listing.Country %></li>
+    <li><b>Image:</b> <%= listing.Image %></li>
+  </ul>
+
+  <!-- Edit Button -->
+  <a href="/listings/<%= listing._id %>/edit">Edit</a>
+  <br/><br/>
+
+  <!-- Delete Button -->
+  <form action="/listings/<%= listing._id %>?_method=DELETE" method="POST">
+    <button type="submit" style="color: red;">Delete</button>
+  </form>
+  <br/>
+  <a href="/listings">Back to Home</a>
+  <hr/>
+
+  <!-- Review Section -->
+  <h2>Leave a Review</h2>
+  <form action="/listings/<%= listing._id %>/reviews" method="POST">
+    <label for="rating">Rating:</label>
+    <input type="range" id="rating" name="review[rating]" min="1" max="5" required>
+    <br/><br/>
+    <b><label for="comment">Comment:</label></b>
+    <br/>
+    <textarea id="comment" name="review[comment]" rows="4" cols="50" required></textarea>
+    <br/><br/>
+    <button type="submit" class="form-button">Submit</button>
+  </form>
+
+  <!-- Display Reviews -->
+  <h3>Reviews</h3>
+  <div class="reviews-container">
+    <% if (listing.reviews && listing.reviews.length > 0) { %>
+      <% listing.reviews.forEach(review => { %>
+        <div class="review-card">
+          <div class="review-content">
+            <b>Rating:</b> <%= review.rating %> ★
+            <br/>
+            <b>Comment:</b> <%= review.comment %>
+            <br/>
+            <b>Date:</b> <%= review.createdAt.toDateString() %>
+          </div>
+
+          <!-- Delete Button for Review -->
+          <form action="/listings/<%= listing._id %>/reviews/<%= review._id %>?_method=DELETE" method="POST">
+            <button type="submit" class="delete-button">Delete</button>
+          </form>
+        </div>
+      <% }) %>
+    <% } else { %>
+      <p>No reviews yet!</p>
+    <% } %>
+  </div>
+
+  <div>
+    <div class="footerr">
+        <i class="fa-brands fa-instagram"></i>
+        <i class="fa-brands fa-facebook"></i>
+        <i class="fa-brands fa-linkedin"></i>
+    </div>
+  </div>
+  <div class="copyright">
+    <p>© wanderlust Private-Limited</p>
+    <div class="privaryy">
+        <p>Privacy</p>
+        <p>Terms</p>
+    </div>
+  </div>
+</body>
