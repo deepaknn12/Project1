@@ -25,7 +25,7 @@ App.engine('ejs', engine);
 App.use(express.static(path.join(__dirname, '/public')));
 
 // Index Route
-App.get("/", async (req, res) => {
+App.get("/listings", async (req, res) => {
     const AllListings = await Listing.find({});
     res.render("listings/index.ejs", { AllListings });
 });
